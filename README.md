@@ -20,6 +20,8 @@
 	- 인터넷
 		- PowerShell => ipconfig /all => VMnet8 정보 => IPv4
 		
+		- 192.168.111.2 : 게이트웨이 겸 DNS 서버
+		- 192.168.111.1 : HOST OS
 	
 	
 	
