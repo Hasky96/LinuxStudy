@@ -23,5 +23,43 @@
 		- 192.168.111.2 : 게이트웨이 겸 DNS 서버
 		- 192.168.111.1 : HOST OS
 	
+	- centos 자동업데이트 사용중지
+	```shell
+	#gsettings set org.gnome.software download-updates false
+	#systemctl dsable dnf-makecache.service
+	#systemctl dsable dnf-makecache.timer
+	```
+	- dnf를 이용하여 원하는 버전 fix
+	```this.repo
+	[BaseOS]
+	name=CentOS-$releasever - Base
+	baseurl=https://archive.kernel.org/centos-vault/8.0.1905/BaseOS/x86_64/os/
+		  http://linuxsoft.cern.ch/centos-vault/8.0.1905/BaseOS/x86_64/os/
+	gpgcheck=0
+
+	[AppStream]
+	name=CentOS-$releasever - AppStream
+	baseurl=https://archive.kernel.org/centos-vault/8.0.1905/AppStream/x86_64/os/
+		  http://linuxsoft.cern.ch/centos-vault/8.0.1905/AppStream/x86_64/os/
+	gpgcheck=0
+
+	[extras]
+	name=CentOS-$releasever - Extras
+	baseurl=https://archive.kernel.org/centos-vault/8.0.1905/extras/x86_64/os/
+		  http://linuxsoft.cern.ch/centos-vault/8.0.1905/extras/x86_64/os/
+	gpgcheck=0
+
+	[centosplus]
+	name=CentOS-$releasever - Plus
+	baseurl=https://archive.kernel.org/centos-vault/8.0.1905/centosplus/x86_64/os/
+		  http://linuxsoft.cern.ch/centos-vault/8.0.1905/centosplus/x86_64/os/
+	gpgcheck=0
+
+	[PowerTools]
+	name=CentOS-$releasever - PowerTools
+	baseurl=https://archive.kernel.org/centos-vault/8.0.1905/PowerTools/x86_64/os/
+		  http://linuxsoft.cern.ch/centos-vault/8.0.1905/PowerTools/x86_64/os/
+	gpgcheck=0
 	
+	```
 	
