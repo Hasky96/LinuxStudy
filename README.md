@@ -1,6 +1,6 @@
 # LinuxStudy
 유튜브 "이것이 리눅스다" 강좌
-
+CENTOS
 
 * 가상머신 사용 4대의 가상머신 활용
 	- VMWare 활용
